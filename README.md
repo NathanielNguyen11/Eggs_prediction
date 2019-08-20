@@ -1,2 +1,2 @@
 # rhinitisprediction
-rhinitis prediction based on environmental factors (Binary_classification)
+Eggs prediction based on environmental factors (8_classes_classification)
