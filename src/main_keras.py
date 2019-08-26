@@ -75,7 +75,6 @@ def main(args):
 
 	seed = 7
 	numpy.random.seed(seed)
-	# load pima indians dataset
 	dataset = numpy.loadtxt(dataset, delimiter=",", skiprows=1)
 	# split into input (X) and output (Y) variables
 	dataset_size = dataset.shape[1] - 1
@@ -106,8 +105,7 @@ def main(args):
 	sess = keras.backend.get_session()
 	save_path = saver.save(sess, "%s/model.ckpt"%check_dir)
 	print("Saved model to disk")
-	# #
-	# #
+	
 	scores = model.evaluate(X_test, Y_test)
 	Y_pro = model.predict(X_test)
 	y_pred = model.predict_classes(X_test)
